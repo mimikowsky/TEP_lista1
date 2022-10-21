@@ -7,7 +7,7 @@ void v_alloc_table_fill_34(int iSize)
 {
     if (iSize <= 0)
     {
-        std::cout << "Nieprawidlowe dane \n";
+        std::cout << "Unvalid data \n";
         return;
     }
 
@@ -19,7 +19,7 @@ void v_alloc_table_fill_34(int iSize)
         table[i] = TAB_FILL_34;
     }
 
-    std::cout << "Zawartosc tablicy: \n";
+    std::cout << "Content of the table: \n";
 
     for (int i = 0; i < iSize; i++)
     {
@@ -94,18 +94,18 @@ int main()
 
     // w tym momencie tworzy sie kopia obiektu, dlatego tez jest printowana: kopia i...
     v_mod_tab(static_tab, 21);
-    std::cout << "Wielkosc tablicy: " << static_tab.igetSize() << " (modulacja przez kopie) \n";
+    std::cout << "Size of the table: " << static_tab.igetSize() << " (modulation through copy) \n";
     // po wykonaniu od razu usuwana
 
     v_mod_tab(&static_tab, 22);
-    std::cout << "Wielkosc tablicy: " << static_tab.igetSize() << " (modulacja przez referencje) \n";
+    std::cout << "Size of the table: " << static_tab.igetSize() << " (modulation through reference) \n";
 
     // znowu kopia
     v_mod_tab(*c_tab1, 30);
-    std::cout << "Wielkosc tablicy: " << c_tab1->igetSize() << " (modulacja przez kopie) \n";
+    std::cout << "Size of the table: " << c_tab1->igetSize() << " (modulation through copy) \n";
 
     v_mod_tab(c_tab1, 50);
-    std::cout << "Wielkosc tablicy: " << c_tab1->igetSize() << " (modulacja przez referencje) \n";
+    std::cout << "Size of the table: " << c_tab1->igetSize() << " (modulation through reference) \n";
 
     delete c_tab1;
     delete c_tab2;
