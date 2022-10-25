@@ -3,6 +3,8 @@
 #include "FuncConsts.h"
 #include "CTable.h"
 
+// functions for 1-4 tasks
+
 void v_alloc_table_fill_34(int iSize)
 {
     if (iSize <= 0)
